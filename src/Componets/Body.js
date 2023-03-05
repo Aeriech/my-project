@@ -127,7 +127,7 @@ function Body() {
     <p></p> 
 
     <p></p>
-    <button onClick={showPlus} style={setStyle}>PLUS</button>
+    <button onClick={showPlus} style={setStyle} >PLUS</button>
     { plus && <PLUS/> }
     <p></p> 
 
@@ -231,8 +231,11 @@ function Number() {
 {/*Changing Value of h1 using onchange in textarea*/}
 function Name() {
     const [name, setName] = useState ('');
+    
     return(
         <>
+        <p></p>
+            <img src='https://i.pinimg.com/originals/f5/ba/af/f5baaf7078815a6f8a073de8bc1255aa.jpg' className='image'></img>
              <h1>
                 My Name is {name}
             </h1>
