@@ -28,7 +28,7 @@ export default function ButtonAppBar() {
           <Button 
           color="inherit"
           onClick={showAlert}
-          >Login</Button>
+          >START</Button>
         </Toolbar>
       </AppBar>
     </Box>
