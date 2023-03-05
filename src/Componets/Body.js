@@ -206,20 +206,38 @@ function Diary() {
 {/*Increase or Decrease number with button click*/}
 function Number() {
     const [count, setCount] = useState (0);
+    const [pn, setPN] = useState ('');
+
+    const PN = (e) => {
+        if (e == 'a') {
+            setCount((count) => count+1)
+        } else {
+            setCount((count) => count-1)
+        }
+        if (count == 0) {
+            setPN('');
+        } 
+        else if (count >= 1) {
+            setPN('POSITIVE');
+        }
+        else {
+            setPN('NEGATIVE');
+        }
+    }
     return(
         <>
         <h1>
-            Increase or Decreased Number: {count}
+            {pn} {count}
         </h1>
 
         <button
-            onClick={() => setCount(count +1)}
+            onClick={() => PN('a')}
         >
             Increase
         </button>
 
         <button
-            onClick={() => setCount(count -1)}
+            onClick={() => PN('m')}
         >
             Decrease
         </button>
