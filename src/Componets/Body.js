@@ -24,6 +24,13 @@ function Body() {
        setShowName(false);
      } else {
        setShowName(true);
+       setShowDiary(false);
+       setShowNum(false);
+       setShowCal(false);
+       setShowMDAS(false);
+       setShowPlus(false);
+       setShowDoor(false);
+       setShowYou(false);
      }
     }
 
@@ -33,7 +40,14 @@ function Body() {
      if (diary == true) {
        setShowDiary(false);
      } else {
-       setShowDiary(true);
+        setShowName(false);
+        setShowDiary(true);
+        setShowNum(false);
+        setShowCal(false);
+        setShowMDAS(false);
+        setShowPlus(false);
+        setShowDoor(false);
+        setShowYou(false);
      }
     }
     
@@ -43,7 +57,14 @@ function Body() {
      if (num == true) {
        setShowNum(false);
      } else {
-       setShowNum(true);
+        setShowName(false);
+        setShowDiary(false);
+        setShowNum(true);
+        setShowCal(false);
+        setShowMDAS(false);
+        setShowPlus(false);
+        setShowDoor(false);
+        setShowYou(false);
      }
     }
 
@@ -53,7 +74,14 @@ function Body() {
      if (cal == true) {
        setShowCal(false);
      } else {
-       setShowCal(true);
+        setShowName(false);
+        setShowDiary(false);
+        setShowNum(false);
+        setShowCal(true);
+        setShowMDAS(false);
+        setShowPlus(false);
+        setShowDoor(false);
+        setShowYou(false);
      }
     }
 
@@ -63,7 +91,14 @@ function Body() {
      if (mdas == true) {
        setShowMDAS(false);
      } else {
-       setShowMDAS(true);
+        setShowName(false);
+        setShowDiary(false);
+        setShowNum(false);
+        setShowCal(false);
+        setShowMDAS(true);
+        setShowPlus(false);
+        setShowDoor(false);
+        setShowYou(false);
      }
     }
 
@@ -73,7 +108,14 @@ function Body() {
      if (plus == true) {
        setShowPlus(false);
      } else {
-       setShowPlus(true);
+        setShowName(false);
+        setShowDiary(false);
+        setShowNum(false);
+        setShowCal(false);
+        setShowMDAS(false);
+        setShowPlus(true);
+        setShowDoor(false);
+        setShowYou(false);
      }
     }
 
@@ -83,7 +125,14 @@ function Body() {
      if (door == true) {
        setShowDoor(false);
      } else {
-       setShowDoor(true);
+        setShowName(false);
+        setShowDiary(false);
+        setShowNum(false);
+        setShowCal(false);
+        setShowMDAS(false);
+        setShowPlus(false);
+        setShowDoor(true);
+        setShowYou(false);
      }
     }
 
@@ -93,7 +142,14 @@ function Body() {
      if (you == true) {
        setShowYou(false);
      } else {
-       setShowYou(true);
+        setShowName(false);
+        setShowDiary(false);
+        setShowNum(false);
+        setShowCal(false);
+        setShowMDAS(false);
+        setShowPlus(false);
+        setShowDoor(false);
+        setShowYou(true);
      }
     }
 
