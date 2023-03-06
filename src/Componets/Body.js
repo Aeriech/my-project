@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import Link from '@mui/material/Link';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import { styled } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
-import Chip from '@mui/material/Chip';
+
 
 
 
@@ -17,7 +13,7 @@ function Body() {
         backgroundColor: 'blue',
         fontSize: 20,
         height: 50,
-        width: 300,
+        width: 150,
         
     };
 
@@ -104,7 +100,7 @@ function Body() {
   return (
     
     <>
-    <p></p>
+    <br></br>
     <button onClick={showName} style={setStyle}>NAME</button>
     <button onClick={showDiary} style={setStyle}>DIARY</button>
     <button onClick={showNum} style={setStyle}>NUMBER</button>

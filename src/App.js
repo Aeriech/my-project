@@ -8,25 +8,10 @@ function App() {
 
 const [show,setShow] = useState(false);
 
-//  const showBody = () =>{
-//   if (show == true) {
-//     setShow(false)
-//   } else {
-//     setShow(true)
-//   }
-//  }
 
   return (
     <div>
     <Header/>
-    <main>
-      {/* <button
-      onClick={showBody}>START</button>
-      {
-      show &&  */}
-      <Body/>
-      {/* } */}
-    </main>
     </div>
   );
 }
