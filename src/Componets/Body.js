@@ -1,21 +1,24 @@
 import React, { useState } from 'react'
 import Link from '@mui/material/Link';
-import { Calculate } from '@mui/icons-material';
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
+import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
-import { color } from '@mui/system';
-
+import Container from '@mui/material/Container';
+import { styled } from '@mui/material/styles';
+import Divider from '@mui/material/Divider';
+import Chip from '@mui/material/Chip';
 
 
 
 function Body() {
+    
+
     const setStyle = {
         color: 'white',
         backgroundColor: 'blue',
         fontSize: 20,
         height: 50,
-        width: 180,
+        width: 300,
+        
     };
 
     const [name,setShowName] = useState(false);
@@ -103,43 +106,23 @@ function Body() {
     <>
     <p></p>
     <button onClick={showName} style={setStyle}>NAME</button>
-    { name && <Name/> }
-    <p></p>
-    
-    <p></p>
     <button onClick={showDiary} style={setStyle}>DIARY</button>
-    { diary && <Diary/> }
-    <p></p>
-    
-    <p></p>
     <button onClick={showNum} style={setStyle}>NUMBER</button>
-    { num && <Number/> }
-    <p></p> 
-
-    <p></p>
-    <button onClick={showCal} style={setStyle}>CALCULATOR</button>
-    { cal && <Calculator/> }
-    <p></p> 
-
-    <p></p>
+    <button onClick={showCal} style={setStyle}>CALCULATOR</button> 
     <button onClick={showMDAS} style={setStyle}>MDAS</button>
-    { mdas && <MDAS/> }
-    <p></p> 
-
-    <p></p>
     <button onClick={showPlus} style={setStyle} >PLUS</button>
-    { plus && <PLUS/> }
-    <p></p> 
-
-    <p></p>
     <button onClick={showDoor} style={setStyle}>DOOR</button>
-    { door && <Door/> }
-    <p></p> 
-
-    <p></p>
     <button onClick={showYou} style={setStyle}>YOUTUBE</button>
+    
+    { name && <Name/> }
+    { diary && <Diary/> }
+    { num && <Number/> }
+    { cal && <Calculator/> }
+    { mdas && <MDAS/> }
+    { plus && <PLUS/> }
+    { door && <Door/> }
     { you && <Youtube/> }
-    <p></p>
+    
     </>
   )
 }
@@ -157,6 +140,7 @@ const Plus = (num) => {
 const[n1, setN1] = useState(0);
 return(
     <>
+    <Divider>*** PLUS ***</Divider>
     <h1>
         {n1}
     </h1>
@@ -181,7 +165,9 @@ function Diary() {
     const[set, setter] = useState('');
     const[num, setNum] = useState(1);
     return(
+        
         <>
+        <Divider>*** DIARY ***</Divider>
         <p></p>
         <textarea
         className='area'
@@ -195,9 +181,9 @@ function Diary() {
         >
             Add To Diary
         </button>
-        <p>
+        <h3>
             {diary}
-        </p>
+        </h3>
         </>
     )
 }
@@ -226,6 +212,7 @@ function Number() {
     }
     return(
         <>
+        <Divider>*** NUMBER ***</Divider>
         <h1>
             {pn} {count}
         </h1>
@@ -241,7 +228,7 @@ function Number() {
         >
             Decrease
         </button>
-
+        <p></p>
     </>
     )
 }
@@ -251,7 +238,8 @@ function Name() {
     const [name, setName] = useState ('');
     
     return(
-        <>
+        <div>
+        <Divider>*** NAME ***</Divider>
         <p></p>
             <img src='https://i.pinimg.com/originals/f5/ba/af/f5baaf7078815a6f8a073de8bc1255aa.jpg' className='image'></img>
              <h1>
@@ -260,7 +248,8 @@ function Name() {
             <textarea placeholder='Your Name' 
                 onChange={(e) => setName(e.target.value)}>
             </textarea>
-        </>
+            <p></p>
+        </div>
     )
 }
 
@@ -268,6 +257,7 @@ function Name() {
 function Youtube() {
     return(
         <>
+        <Divider>*** YOUTUBE ***</Divider>
             <p>Click Image To Open Link</p>
             <Link href="https://www.youtube.com/">
                 <img onClick={<Link href="https://www.youtube.com/"></Link>} src="https://blog.ambient-mixer.com/wp-content/uploads/2016/01/How-YouTube-Is-Replacing-Live-Music-Spots-Ambient-Mixer.png"/>
@@ -345,6 +335,7 @@ function MDAS() {
     const [num2, setNum2] = useState(0);
     return(
         <>
+        <Divider>*** MDAS ***</Divider>
         <p>Enter Number Here</p>
         <textarea 
         placeholder='First Number' 
@@ -385,7 +376,7 @@ function Door() {
     }
     return(
         <>
-        <p></p>
+        <Divider>*** DOOR ***</Divider>
         <img src={OP}></img>
         <p style={styleObj}>{door}</p>
 
@@ -400,6 +391,7 @@ function Door() {
         >
             Close
         </button>
+        <p></p>
         </>
     )
 
@@ -429,6 +421,8 @@ function Calculator() {
     const[num3, setNum3] = useState(0);
     return(
         <>
+        <Divider>*** CALCULATOR ***</Divider>
+        
         <h1>
             Result: {num1}
         </h1>
@@ -466,6 +460,7 @@ function Calculator() {
         onClick={(e) => Calcu(num2, num3, "sub")}>
         Sub
         </button>
+        <p></p>
         </>
     )
 }
